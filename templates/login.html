@@ -1,0 +1,27 @@
+
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    <h2>Login to Distributed DNS System</h2>
+    <form method="POST">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn">Login</button>
+    </form>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="error">
+            {{ messages[0] }}
+        </div>
+        {% endif %}
+    {% endwith %}
+</div>
+{% endblock %}
