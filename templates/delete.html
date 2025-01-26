@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+{% block title %}Delete DNS Record{% endblock %}
+
+{% block content %}
+<h2>Delete DNS Record</h2>
+<form method="POST">
+    <div>
+        <label for="domain">Domain:</label>
+        <input type="text" id="domain" name="domain" required>
+    </div>
+    <div>
+        <label for="record_type">Record Type:</label>
+        <input type="text" id="record_type" name="record_type" required>
+    </div>
+    <button type="submit" class="btn"><i class="fas fa-trash"></i> Delete Record</button>
+</form>
+{% if response %}
+<div class="response {{ 'success' if 'Record deleted' in response else 'error' }}">
+    {{ response }}
+</div>
+{% endif %}
+<a href="/dashboard" class="btn">Back to Dashboard</a>
+{% endblock %}
