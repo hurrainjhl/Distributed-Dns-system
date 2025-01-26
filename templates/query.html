@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+{% block title %}Query DNS Records{% endblock %}
+
+{% block content %}
+<h2>Query DNS Records</h2>
+<form method="POST">
+    <div>
+        <label for="domain">Domain:</label>
+        <input type="text" id="domain" name="domain" required>
+    </div>
+    <div>
+        <label for="record_type">Record Type:</label>
+        <input type="text" id="record_type" name="record_type" required>
+    </div>
+    <button type="submit" class="btn">Query</button>
+</form>
+{% if response %}
+<div class="response {{ 'success' if 'DNS Response' in response else 'error' }}">
+    {{ response }}
+</div>
+{% endif %}
+<a href="/dashboard" class="btn">Back to Dashboard</a>
+{% endblock %}
