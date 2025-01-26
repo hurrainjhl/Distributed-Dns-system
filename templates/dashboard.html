@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="dashboard">
+    <h2>Welcome to the Distributed DNS System</h2>
+    <div class="menu">
+        <a href="/query" class="btn"><i class="fas fa-search"></i> Query DNS Records</a>
+        <a href="/add" class="btn"><i class="fas fa-plus-circle"></i> Add DNS Records</a>
+        <a href="/update" class="btn"><i class="fas fa-edit"></i> Update DNS Records</a>
+        <a href="/delete" class="btn"><i class="fas fa-trash"></i> Delete DNS Records</a>
+        <a href="/logout" class="btn logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+</div>
+{% endblock %}
