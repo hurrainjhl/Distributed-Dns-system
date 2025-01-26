@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+}
+
+/* Headings */
+h2 {
+    margin-top: 20px;
+    color: #444;
+    font-size: 24px;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.logout-btn {
+    background-color: #dc3545;
+}
+
+.logout-btn:hover {
+    background-color: #a71d2a;
+}
+
+/* Dashboard */
+.dashboard {
+    margin-top: 50px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Login Page */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Error Messages */
+.error {
+    margin-top: 15px;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Forms (Add, Update, Delete, Query Pages) */
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    text-align: left;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+    width: 100%;
+}
+
+/* Response Messages */
+.response {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+}
+
+.response.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.response.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Hover Effects */
+a.btn {
+    transition: all 0.3s ease;
+}
+
+a.btn:hover {
+    background-color: #0056b3;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Center Alignment for Dashboard Links */
+.menu a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 16px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .login-container, form {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 90%;
+    }
+}
