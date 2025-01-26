@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+{% block title %}Update DNS Record{% endblock %}
+
+{% block content %}
+<h2>Update DNS Record</h2>
+<form method="POST">
+    <div>
+        <label for="domain">Domain:</label>
+        <input type="text" id="domain" name="domain" required>
+    </div>
+    <div>
+        <label for="record_type">Record Type:</label>
+        <input type="text" id="record_type" name="record_type" required>
+    </div>
+    <div>
+        <label for="value">New Value:</label>
+        <input type="text" id="value" name="value" required>
+    </div>
+    <button type="submit" class="btn"><i class="fas fa-edit"></i> Update Record</button>
+</form>
+{% if response %}
+<div class="response {{ 'success' if 'Record updated' in response else 'error' }}">
+    {{ response }}
+</div>
+{% endif %}
+<a href="/dashboard" class="btn">Back to Dashboard</a>
+{% endblock %}
